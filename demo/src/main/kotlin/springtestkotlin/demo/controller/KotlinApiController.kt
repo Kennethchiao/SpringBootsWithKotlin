@@ -10,7 +10,7 @@ import springtestkotlin.demo.dao.TestuserRepository
 import springtestkotlin.demo.model.testuser
 
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/postgres")
 class KotlinApiController {
 
     @RequestMapping("/{id}", method = arrayOf(RequestMethod.GET))
