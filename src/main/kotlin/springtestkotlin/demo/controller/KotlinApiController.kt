@@ -21,7 +21,7 @@ class KotlinApiController {
     @Autowired
     lateinit var repository: TestuserRepository
 
-    @RequestMapping("/save",method = arrayOf(RequestMethod.GET))
+    @RequestMapping("/save", method = arrayOf(RequestMethod.GET))
     fun save(): String {
         repository.save(testuser("AmyK"))
         repository.save(testuser("KAmy"))
@@ -31,14 +31,12 @@ class KotlinApiController {
         return "Done"
     }
 
-    @RequestMapping("/findall",method = arrayOf(RequestMethod.GET))
+    @RequestMapping("/findall", method = arrayOf(RequestMethod.GET))
     fun findAll() = repository.findAll()
 
-    @RequestMapping("/findbyid/{id}",method = arrayOf(RequestMethod.GET))
-    fun findById(@PathVariable id: Long)
-            = repository.findById(id)
+    @RequestMapping("/findbyid/{id}", method = arrayOf(RequestMethod.GET))
+    fun findById(@PathVariable id: Long) = repository.findById(id)
 
-    @RequestMapping("/findbyUsername/{userName}",method = arrayOf(RequestMethod.GET))
-    fun findByUserName(@PathVariable userName: String)
-            = repository.findByUserName(userName)
+    @RequestMapping("/findbyUsername/{userName}", method = arrayOf(RequestMethod.GET))
+    fun findByUserName(@PathVariable userName: String) = repository.findByUserName(userName)
 }

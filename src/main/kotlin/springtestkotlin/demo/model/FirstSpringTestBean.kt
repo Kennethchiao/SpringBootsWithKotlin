@@ -10,5 +10,5 @@ class testuser(
         val userName: String,
         @Id @GeneratedValue(strategy = GenerationType.AUTO)
         val id: Long = -1) {
-    private constructor(): this("")
+    private constructor() : this("")
 }

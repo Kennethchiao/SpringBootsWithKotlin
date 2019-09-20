@@ -22,7 +22,7 @@ fun createSocketFactory(protocols: List<String>) =
 
 fun urlConnect(connectUrl: HttpsURLConnection): String {
     val baos = ByteArrayOutputStream()
-    return  try {
+    return try {
         connectUrl.apply {
             sslSocketFactory = createSocketFactory(listOf("TLSv1.2"))
             hostnameVerifier = HostnameVerifier { _, _ -> true }
